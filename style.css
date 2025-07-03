@@ -4,4 +4,10 @@ h1{
 background-color: blue;}
 
 h2{font-size: 60px;
-color: black;}
+color: rgb(0, 0, 0);
+background-color: brown;
+} 
+
+body{
+    background-color: #000000;
+}
