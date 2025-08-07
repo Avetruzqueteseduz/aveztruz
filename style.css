@@ -10,3 +10,10 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
+
+.nav_lista{
+    display: flex;
+    list-style: nome;
+    gap: 80px;
+    text-transform: uppercase;
+}
