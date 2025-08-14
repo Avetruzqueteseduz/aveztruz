@@ -38,4 +38,5 @@ header {
 
 .nav_item:hover {
 color: aqua;
+text-decoration: underline;
 }
