@@ -37,5 +37,5 @@ header {
 }
 
 .nav_item:hover {
-background-color: rgb(160, 0, 0);
+color: aqua;
 }
