@@ -36,6 +36,6 @@ header {
     color: white;
 }
 
-.nav_item a:hover {
+.nav_item:hover {
 background-color: rgb(160, 0, 0);
 }
