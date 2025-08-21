@@ -37,6 +37,11 @@ header {
 }
 
 .nav_item:hover {
-color: aqua;
-text-decoration: underline;
+    color: aqua;
+    text-decoration: underline;
+}
+
+.home {
+    display: flex;
+    min-height: calc(100vh- 91px);
 }
