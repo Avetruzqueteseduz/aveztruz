@@ -15,6 +15,7 @@
     <header class="cabecalho">
         <nav class="navbar">
             <i class="fa-solid fa-meteor" id="logo">kauor</i>
+            <buttan class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></buttan>
             <ul class="nav_lista">
                 <li class="nav_item">sertanajo</li>
                 <li class="nav_item">rock</li>
@@ -35,6 +36,25 @@
 playlist de eletrofunk <span class="titulocor">as melhores</span> de maravilha
         </section>
     </main>
+    <script>
+        // JavaScript para controlar o menu hambúrguer
+        const menuToggle = document.getElementById('menuToggle');
+        const navLista = document.getElementById('navLista');
+        
+        menuToggle.addEventListener('click', function() {
+            navLista.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        
+        // Fechar menu ao clicar em um item
+        const navItems = document.querySelectorAll('.nav_item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navLista.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 
