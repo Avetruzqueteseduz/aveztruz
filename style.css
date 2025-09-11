@@ -22,7 +22,6 @@ header {
 
 .navbar {
     width: 100%;
-    font-size: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,5 +64,12 @@ header {
  }
 
  .titulocor {
-    color: blueviolet;
+    color: blueviolet
+ }
+
+ .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    
  }
