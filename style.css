@@ -74,5 +74,12 @@ header {
     background: none;
     border: none;
     padding: 5px;
+ }
 
+ .menu-toggle span{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
  }
