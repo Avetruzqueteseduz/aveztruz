@@ -1,206 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-        --cor-primai-1:#21295C;
-        --cor-primai-2:#1B3B6F;
-        --cor-primai-3:#0988C3;
-        --cor-primai-4:#1C7293;
-        --cor-primai-5:#9EB3C2;
+    --cor-primaria-1: #D9D0DE;
+    --cor-primaria-2: #BC8DA0;
+    --cor-primaria-3: #A04668;
+    --cor-primaria-4: #AB4967;
+    --cor-primaria-5: #0C1713;
 
-        --cor-secunaria-1:fff;
-        --cor-secunaria-2:fff;
-
-    }
-
+    --cor-secundaria-1: #fff;
+    --cor-secundaria-2:#1d1d1d;
+}
 
 
 
-    body {
-        background: url(https://media.istockphoto.com/id/1523130039/pt/foto/green-rustic-texture-high-quality-texture-in-extremely-high-resolution-dark-green-grunge.jpg?s=612x612&w=0&k=20&c=p-ThP5-uQ9KWh3HZTZ0olsv7hi5DLyOBK3ghdEMzn48=);
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-    #Logo {
-        font-size: 50px;
-        font-weight: 600;
-        color: white;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background-color: blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "BBH Sans Bartle", sans-serif;
-    }
+#logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_lista {
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    text-transform: uppercase;
+}
+
+.nav_item {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+ .nav_item:hover {
+    background-color:rgb(191, 4, 191) ;
+    color: rgb(155, 153, 153);
+    text-decoration: underline;
+ }
+
+ .home {
+    display: flex;
+    min-height: calc(100vh - 91px);
+    margin-top: 91px;
+ }
+
+ section {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: center;
+ }
+
+ .titulo {
+    font-size: 4rem;
+    color: #1d1d1d;
+    text-align: center;
+    width: 100%;
+ }
+
+ .titulocor {
+    color: blueviolet;
+ }
+
+ /* Menu hambúrguer para mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
     header {
-        width: 100%;
-        height: 100%;
-        padding: 20px 8%;
-        background: url(https://thumbs.dreamstime.com/b/preto-e-escuro-abstratos-fundo-verde-da-textura-projeto-do-grunge-com-pintura-antiga-elegante-na-ilustra%C3%A7%C3%A3o-parede-ou-papel-de-141957864.jpg);
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-
+        padding: 15px 5%;
     }
-
-    .nav_item {
-        color: white;
-        font-size: 20px;
-        font: bold;
-        padding: 5px 5px 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
+    
+    #logo {
+        font-size: 1.2rem;
     }
-
-    .nav_item:hover {
-        background-color: green;
-        text-decoration: underline;
-        border-radius: 8px;
-    }
-
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .nav_lista {
-        display: flex;
-        list-style: none;
-        gap: 80px;
-        text-transform: uppercase;
-    }
-
-    .home {
-        display: flex;
-        min-height: calc(100vh-91px);
-        margin-top: 91px;
-    }
-
-    section {
-        width: 100%;
-        padding: 20px 8%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .titulo {
-        font-size: 30px;
-        color: white;
-        text-align: center;
-        width: 100%;
-    }
-
-    .titulocor {
-        color: rgb(60, 255, 0);
-    }
-
-    /* Menu hambúrguer para mobile */
+    
     .menu-toggle {
-        display: none;
+        display: flex;
+    }
+    
+    .nav_lista {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: blueviolet;
         flex-direction: column;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 5px;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        gap: 30px;
+        transition: left 0.3s ease;
     }
-
-    .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 3px 0;
-        transition: 0.3s;
+    
+    .nav_lista.active {
+        left: 0;
     }
-
-    /* Media queries para responsividade */
-    @media (max-width: 768px) {
-        header {
-            padding: 15px 5%;
-        }
-
-        #logo {
-            font-size: 1.2rem;
-        }
-
-        .menu-toggle {
-            display: flex;
-        }
-
-        .nav_lista {
-            position: fixed;
-            top: 70px;
-            left: -100%;
-            width: 100%;
-            height: calc(100vh - 70px);
-            background: url(https://thumbs.dreamstime.com/b/preto-e-escuro-abstratos-fundo-verde-da-textura-projeto-do-grunge-com-pintura-antiga-elegante-na-ilustra%C3%A7%C3%A3o-parede-ou-papel-de-141957864.jpg);
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding-top: 50px;
-            gap: 30px;
-            transition: left 0.3s ease;
-        }
-
-        .nav_lista.active {
-            left: 0;
-        }
-
-        .nav_item {
-            font-size: 20px;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        /* Animação do menu hambúrguer */
-        .menu-toggle.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-toggle.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
+    
+    .nav_item {
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
     }
-
-    @media (max-width: 480px) {
-        header {
-            padding: 10px 3%;
-        }
-
-        #logo {
-            font-size: 1rem;
-        }
-
-        .nav_item {
-            font-size: 18px;
-        }
+    
+    /* Animação do menu hambúrguer */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
-
-    /* Media queries para o título */
-    @media (max-width: 768px) {
-        .titulo {
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        section {
-            padding: 20px 5%;
-        }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
     }
-
-    @media (max-width: 480px) {
-        .titulo {
-            font-size: 2rem;
-        }
-
-        section {
-            padding: 20px 3%;
-        }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 3%;
+    }
+    
+    #logo {
+        font-size: 1rem;
+    }
+    
+    .nav_item {
+        font-size: 18px;
+    }
+}
+
+
+/* Media queries para o título */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    section {
+        padding: 20px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 20px 3%;
+    }
+}
