@@ -55,12 +55,12 @@ header {
 
 .nav_item {
     font-size: 25px;
-    color: white;
+    color:var(--cor-primaria-4);
     cursor: pointer;
     transition: all 0.3s ease;
 }
  .nav_item:hover {
-    background-color:rgb(191, 4, 191) ;
+    background-colo:var(--cor-primaria-5) ;
     color: rgb(155, 153, 153);
     text-decoration: underline;
  }
