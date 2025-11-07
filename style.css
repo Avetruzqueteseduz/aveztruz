@@ -59,6 +59,11 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+a { text-decoration: none;}
+
+
+
  .nav_item:hover {
     background-color: var(--cor-secundaria-1);
     color: rgb(155, 153, 153);
